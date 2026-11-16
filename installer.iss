@@ -18,7 +18,6 @@ WizardStyle=modern
 ArchitecturesInstallIn64BitMode=x64
 PrivilegesRequired=lowest
 UninstallDisplayIcon={app}\{#MyAppExeName}
-SetupIconFile=assets\helloface.ico
 
 [Files]
 Source: "build\Release\HelloFace.exe"; DestDir: "{app}"; Flags: ignoreversion
