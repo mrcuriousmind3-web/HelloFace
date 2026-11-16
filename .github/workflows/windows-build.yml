@@ -57,7 +57,31 @@ jobs:
             dist/HelloFace-Explainer.mp4
           if-no-files-found: error
           retention-days: 30
-      - name: Publish GitHub Release
+      - name: Publish preview release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v0.1.0-preview
+          target_commitish: ${{ github.sha }}
+          name: HelloFace v0.1.0 Preview
+          prerelease: true
+          make_latest: false
+          fail_on_unmatched_files: true
+          body: |
+            ## HelloFace Windows Preview
+
+            This preview package contains:
+            - **HelloFace-Setup.exe** — installs the current HelloFace dashboard preview.
+            - **HelloFace-Explainer.mp4** — short explainer video.
+
+            ### Important
+            This is an engineering preview, not a working Windows facial-login provider. Camera enrollment, live face matching, anti-spoofing, and Windows sign-in integration are not implemented. Keep Windows PIN/password sign-in enabled.
+
+            Built and tested by the HelloFace Windows CI workflow.
+          files: |
+            dist/HelloFace-Setup.exe
+            dist/HelloFace-Explainer.mp4
+      - name: Publish tagged release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
