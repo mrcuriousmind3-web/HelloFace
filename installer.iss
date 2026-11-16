@@ -17,11 +17,9 @@ SolidCompression=yes
 WizardStyle=modern
 ArchitecturesInstallIn64BitMode=x64
 PrivilegesRequired=lowest
-UninstallDisplayIcon={app}\{#MyAppExeName}
 
 [Files]
-Source: "build\Release\HelloFace.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "assets\helloface-mark.svg"; DestDir: "{app}\assets"; Flags: ignoreversion
+Source: "dist\app\HelloFace.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\HelloFace Preview"; Filename: "{app}\{#MyAppExeName}"
