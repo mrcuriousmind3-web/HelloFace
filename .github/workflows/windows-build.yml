@@ -26,10 +26,20 @@ jobs:
         run: cmake --build build --config Release --parallel
       - name: Test
         run: ctest --test-dir build -C Release --output-on-failure
+      - name: Stage application for installer
+        shell: pwsh
+        run: |
+          $exe = Get-ChildItem -Path build -Filter HelloFace.exe -File -Recurse | Select-Object -First 1
+          if (!$exe) {
+            Get-ChildItem build -Recurse | Select-Object FullName
+            throw "CMake did not produce HelloFace.exe"
+          }
+          New-Item -ItemType Directory -Force dist\app | Out-Null
+          Copy-Item $exe.FullName dist\app\HelloFace.exe
+          Write-Host "Staged $($exe.FullName)"
       - name: Package Setup.exe
         shell: pwsh
         run: |
-          New-Item -ItemType Directory -Force dist | Out-Null
           & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer.iss
           if (!(Test-Path "dist/HelloFace-Setup.exe")) { throw "Installer was not generated" }
       - name: Render explainer MP4
