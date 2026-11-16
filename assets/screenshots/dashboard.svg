@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920">
+<rect width="1440" height="920" fill="#0d1725"/>
+<rect x="40" y="35" width="60" height="60" rx="16" fill="none" stroke="#70e1b5" stroke-width="5"/><ellipse cx="70" cy="64" rx="12" ry="19" fill="none" stroke="#f4f7fb" stroke-width="4"/>
+<g font-family="Segoe UI,Arial"><text x="125" y="82" fill="#f4f7fb" font-size="42" font-weight="700">HelloFace</text><text x="128" y="130" fill="#9daec0" font-size="16" font-weight="700">WINDOWS FACE MATCHING / PREVIEW BUILD</text>
+<text x="60" y="235" fill="#f4f7fb" font-size="48" font-weight="700">Profile management</text><text x="62" y="290" fill="#9daec0" font-size="22">Manage up to four local profile slots. Biometric capture is not enabled in this preview.</text>
+</g>
+<g fill="#182738" stroke="#304356" stroke-width="2">
+<rect x="60" y="350" width="620" height="180" rx="24"/><rect x="730" y="350" width="620" height="180" rx="24"/><rect x="60" y="570" width="620" height="180" rx="24"/><rect x="730" y="570" width="620" height="180" rx="24"/>
+</g>
+<g font-family="Segoe UI,Arial"><g fill="#f4f7fb" font-size="28" font-weight="600"><text x="92" y="405">Slot 01</text><text x="762" y="405">Slot 02</text><text x="92" y="625">Slot 03</text><text x="762" y="625">Slot 04</text></g><g fill="#70e1b5" font-size="18" font-weight="700"><text x="92" y="465">EMPTY</text><text x="762" y="465">EMPTY</text><text x="92" y="685">EMPTY</text><text x="762" y="685">EMPTY</text></g><g fill="#9daec0" font-size="20"><text x="92" y="500">No face template enrolled</text><text x="762" y="500">No face template enrolled</text><text x="92" y="720">No face template enrolled</text><text x="762" y="720">No face template enrolled</text></g>
+<rect x="60" y="825" width="1320" height="65" rx="18" fill="#1c3040" stroke="#365367" stroke-width="2"/><text x="84" y="865" fill="#f4f7fb" font-size="20">PREVIEW MODE — camera, ONNX inference, TPM vault and Windows sign-in are not implemented yet.</text></g></svg>
