@@ -30,6 +30,6 @@ os.makedirs("dist",exist_ok=True)
 for i,s in enumerate(slides): slide(*s,i)
 concat="dist/frames.txt"
 with open(concat,"w",encoding="utf-8") as f:
-    for i in range(len(slides)): f.write(f"file 'dist/frame{i:02d}.png'\nduration 3\n")
-    f.write(f"file 'dist/frame{len(slides)-1:02d}.png'\n")
+    for i in range(len(slides)): f.write(f"file 'frame{i:02d}.png'\nduration 3\n")
+    f.write(f"file 'frame{len(slides)-1:02d}.png'\n")
 subprocess.run(["ffmpeg","-y","-f","concat","-safe","0","-i",concat,"-vf","fps=30,format=yuv420p","-c:v","libx264","-movflags","+faststart","dist/HelloFace-Explainer.mp4"],check=True)
