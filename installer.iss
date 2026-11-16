@@ -4,7 +4,7 @@
 #define MyAppExeName "HelloFace.exe"
 
 [Setup]
-AppId={{8E4D55C2-1AB8-4E70-92E4-2A5B0F7A90A1}
+AppId={{8E4D55C2-1AB8-4E70-92E4-2A5B0F7A90A1}}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 AppPublisher={#MyAppPublisher}
